@@ -1,0 +1,9 @@
+version: '3'
+services:
+  iruby:
+    build: .
+    ports:
+      - 8888:8888
+    volumes:
+      - ./:/home/jovyan
+    command: ["start-notebook.sh", "--NotebookApp.token=''"]
