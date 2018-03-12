@@ -14,6 +14,9 @@ RUN ./autogen.sh && ./configure && sudo make && sudo make install
 RUN gem install cztop iruby
 RUN iruby register
 
+# Install additional gems here
+RUN gem install rspec
+
 # Reset user and work dir
 USER jovyan
 WORKDIR /home/jovyan
